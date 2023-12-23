@@ -1,2 +1,4 @@
 # PasswordGenerator
-Python program to create secure passwords.
+- 😊easy to use
+- 🔐secure
+- 👓configurable
