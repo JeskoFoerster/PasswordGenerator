@@ -24,13 +24,21 @@ def create_password(length, use_numbers, use_upper_char, use_special_char):
     new_password = ''.join(secrets.choice(alphabet) for _ in range(length))
     password.set(new_password)
 
+    # change button colors
+    copy_button.configure(bootstyle="default")
+    generate_button.configure(bootstyle="success")
+
 
 def copy_to_clip_board():
-    print(f"{password.get()} copied to clipboard")
+    print(f"\"{password.get()}\" copied to clipboard")
 
+    # copying
     pyperclip.copy(password.get())
     pyperclip.paste()
 
+    # change button colors
+    copy_button.configure(bootstyle="success")
+    generate_button.configure(bootstyle="default")
 
 TITLE_CONTENT = "Password Generator"
 
